@@ -1,0 +1,11 @@
+country_name,subscribers,monthly_recurring_revenue,avg_revenue_per_user,estimated_lifetime_revenue,rank_by_mrr,rank_by_lifetime_revenue
+United States,451,5664,12.56,63218,1,1
+Spain,451,5662,12.55,62095,2,2
+Canada,317,3950,12.46,44917,3,3
+United Kingdom,183,2318,12.67,27024,4,5
+Italy,183,2317,12.66,24480,5,10
+France,183,2307,12.61,27055,6,4
+Brazil,183,2285,12.49,25933,7,6
+Australia,183,2271,12.41,25815,8,7
+Germany,183,2260,12.35,25155,9,8
+Mexico,183,2237,12.22,25076,10,9
