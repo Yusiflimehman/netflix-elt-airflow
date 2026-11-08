@@ -1,0 +1,18 @@
+# Single-container Airflow for running the task locally.
+#   docker compose up -d
+#   UI: http://localhost:8080  user: admin
+#   password: docker compose exec airflow cat /opt/airflow/standalone_admin_password.txt
+services:
+  airflow:
+    image: apache/airflow:2.10.5-python3.11
+    command: standalone
+    user: "${AIRFLOW_UID:-50000}:0"
+    ports:
+      - "8080:8080"
+    environment:
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "false"
+      NETFLIX_DATA_DIR: /opt/airflow/data
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./data:/opt/airflow/data
